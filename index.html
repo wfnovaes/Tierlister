@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>School guide</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script type="text/javascript" src="action.js"></script>
+        <link 
+            href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" 
+            rel="stylesheet"  type='text/css'>
+    </head>
+    <body onscroll="grow()" onload="tierer()">
+        <div class="header">
+            <h1>TIERLISTER INDEX</h1>
+        </div>
+        <div id="description" class="description">
+            <img id="tierlistImage" src="https://imgur.com/dcJucdc.jpeg" alt="tierlist img">
+            <h2 id="tierlistName">TIERLIST</h2>
+            <p id="tierlistDescription"></p>
+        </div>
+        <div style="display: flex;">
+        <div id="tierlist" class="tierlist">
+        </div>
+        <div id="rest" class="rest" ondrop="drop(event)" ondragover = "allowDrop(event)">
+        </div>
+        </div>
+        <div id="creation" class="inactiveCreation">
+            <input id="memberName" class="panelTop" type="text">
+            <input id="memberURL" class="panelTop" type="text" onchange="changeImage()">
+            <div id="imgContainer">
+                <img id="memberImage">
+            </div>
+            <div class="direita" style="display: flex; flex-wrap: wrap; width: calc(70vw - 54vh); height: fit-content;">
+                <textarea id="memberDescription"></textarea>
+                <div class="cancel" id="cancel" onclick="lift()">CANCEL</div>
+                <div class="confirm" id="confirm" onclick="newCharacter()">CONFIRM</div>
+            </div>
+        </div>
+    </body>
+</html>
